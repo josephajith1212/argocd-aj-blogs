@@ -13,7 +13,7 @@ image:
 ingress:
   enabled: true
   host: blogs-ajlabs.duckdns.org
-  path: /blogs
+  path: /
   tlsSecret: blogs-ajlabs.duckdns.org-tls
   certresolver: default
 
