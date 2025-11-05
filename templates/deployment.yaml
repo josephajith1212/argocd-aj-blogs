@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "my-app.fullname" . }}
+  name: {{ include "aj-blogs.fullname" . }}
   labels:
-    app: {{ include "my-app.name" . }}
+    app: {{ include "aj-blogs.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "my-app.fullname" . }}
+      app: {{ include "aj-blogs.fullname" . }}
   template:
     metadata:
       labels:
-        app: {{ include "my-app.fullname" . }}
+        app: {{ include "aj-blogs.fullname" . }}
     spec:
       containers:
-        - name: {{ include "my-app.name" . }}
+        - name: {{ include "aj-blogs.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: {{ .Values.service.targetPort }}
