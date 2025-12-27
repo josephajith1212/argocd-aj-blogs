@@ -11,10 +11,8 @@ image:
 
 ingress:
   enabled: true
-  host: blogs-ajlabs.duckdns.org
+  host: blogs.aj-labs.ca
   path: /
-  tlsSecret: blogs-ajlabs.duckdns.org-tls
-  certresolver: default
 service:
   port: 80
   targetPort: 80
