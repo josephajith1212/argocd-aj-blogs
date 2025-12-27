@@ -5,9 +5,7 @@ metadata:
   name: {{ include "aj-blogs.fullname" . }}
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.tls.certresolver: {{ .Values.ingress.certresolver }}
+    traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   ingressClassName: traefik
   rules:
@@ -21,8 +19,4 @@ spec:
                 name: {{ include "aj-blogs.fullname" . }}
                 port:
                   number: {{ .Values.service.port }}
-  tls:
-    - hosts:
-        - {{ .Values.ingress.host }}
-      secretName: {{ .Values.ingress.tlsSecret }}
 {{- end }}
