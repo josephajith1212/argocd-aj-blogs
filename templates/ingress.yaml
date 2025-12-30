@@ -9,7 +9,6 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.tls.certresolver: default
 spec:
-  ingressClassName: traefik
   rules:
     - host: {{ .Values.ingress.host }}
       http:
