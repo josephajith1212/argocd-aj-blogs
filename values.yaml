@@ -8,7 +8,7 @@ replicaCount: 1
 
 image:
   repository: bozosapien/hugo-site
-  tag: v1.0.26
+  tag: v1.0.27
 ingress:
   enabled: true
   host: blogs.aj-labs.ca
